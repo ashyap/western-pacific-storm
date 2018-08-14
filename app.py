@@ -9,6 +9,11 @@ from dash.dependencies import Input, Output
 from toolz import compose, pluck, groupby, valmap, first, unique, get, countby
 
 app = dash.Dash()
+# For Heroku deployment.
+server = app.server
+# Don't understand this one bit, but apparently it's needed.
+server.secret_key = os.environ.get("SECRET_KEY", "secret")
+
 # Boostrap CSS.
 app.css.append_css({
     "external_url": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
