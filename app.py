@@ -161,7 +161,7 @@ def get_storm_map(value):
         ],
         'layout': {
             'mapbox': {
-                'accesstoken': 'pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2ozcGI1MTZ3MDBpcTJ3cXR4b3owdDQwaCJ9.8jpMunbKjdq1anXwU5gxIw'
+                'accesstoken': 'pk.eyJ1IjoicGFyejN2YWwiLCJhIjoiY2prd3F4bW1yMDBydjNwcXg1aDBoeWFiYiJ9.8Kt0VS6erGnD9Lb20tW31A'
             },
             'hovermode': 'closest',
             'margin': {'l': 0, 'r': 0, 'b': 0, 't': 0}
