@@ -7,12 +7,13 @@ from csv import DictReader
 from datetime import datetime
 from dash.dependencies import Input, Output
 from toolz import compose, pluck, groupby, valmap, first, unique, get, countby
+import os
 
 app = dash.Dash()
 # For Heroku deployment.
 server = app.server
 # Don't understand this one bit, but apparently it's needed.
-# server.secret_key = os.environ.get("SECRET_KEY", "secret")
+server.secret_key = os.environ.get("SECRET_KEY", "secret")
 
 # # Boostrap CSS.
 # app.css.append_css({
