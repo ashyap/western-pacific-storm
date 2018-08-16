@@ -12,27 +12,27 @@ app = dash.Dash()
 # For Heroku deployment.
 server = app.server
 # Don't understand this one bit, but apparently it's needed.
-server.secret_key = os.environ.get("SECRET_KEY", "secret")
+# server.secret_key = os.environ.get("SECRET_KEY", "secret")
 
-# Boostrap CSS.
-app.css.append_css({
-    "external_url": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-})
-
-# Extra Dash styling.
-app.css.append_css({
-    "external_url": 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-})
-
-# JQuery is required for Bootstrap.
-app.scripts.append_script({
-    "external_url": "https://code.jquery.com/jquery-3.2.1.min.js"
-})
-
-# Bootstrap Javascript.
-app.scripts.append_script({
-    "external_url": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-})
+# # Boostrap CSS.
+# app.css.append_css({
+#     "external_url": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+# })
+#
+# # Extra Dash styling.
+# app.css.append_css({
+#     "external_url": 'https://codepen.io/chriddyp/pen/bWLwgP.css'
+# })
+#
+# # JQuery is required for Bootstrap.
+# app.scripts.append_script({
+#     "external_url": "https://code.jquery.com/jquery-3.2.1.min.js"
+# })
+#
+# # Bootstrap Javascript.
+# app.scripts.append_script({
+#     "external_url": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+# })
 
 
 with open('storms_scraped_cleaned.csv','r') as f:
@@ -100,7 +100,7 @@ app.layout = html.Div([
                 dcc.Dropdown(
                     id='years',
                     options=years,
-                    value=years[0],
+                    value=years[0]['value'],
                     multi=False
                 ),
             ]),
